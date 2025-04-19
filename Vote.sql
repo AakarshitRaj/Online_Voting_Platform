@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS VoteServiceDB;
+USE VoteServiceDB;
+
+DROP TABLE IF EXISTS votes;
+
+CREATE TABLE votes (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    voter_id BIGINT NOT NULL UNIQUE,
+    candidate_id BIGINT NOT NULL,
+    election_id BIGINT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+select * from votes;

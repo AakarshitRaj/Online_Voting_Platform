@@ -17,4 +17,8 @@ public class CandidateDTO {
 
 	    @NotBlank(message = "Party name is required")
 	    private String party;
+	    
+	    private Long id;
+	    
+	    private int votes;
 }
